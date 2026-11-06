@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MODEL = joblib.load(ROOT / "models" / "return_model.joblib")
 _metrics = ROOT / "models" / "metrics.json"
 BEST_MODEL = json.loads(_metrics.read_text())["best_model"] if _metrics.exists() else "unknown"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.1.0"
 
 app = FastAPI(title="E-Commerce Product Return Prediction", version=APP_VERSION)
 
